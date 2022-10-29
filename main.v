@@ -1,37 +1,26 @@
 import os { input }
 import term
-
-/**
- * Show the options menu
-*/
-fn menu() int {
-	opts := [
-		'1 - Summation',
-		'2 - Subtractrion',
-		'3 - Multiplication',
-		'4 - Division'
-	]
-
-	// Pick and option
-	for opt in opts {
-		println(opt)
-	}
-	return input('Type a number: ').int()
-}
+import menu
 
 /**
  * Main function
 */
 fn main() {
 	mut play := true
-	
+
+	// First game
+	term.clear()
+	mut choose := menu.show()
+	println(choose)
+
+	// Play more times
 	for play {
 		rec := input('Keep gaming? (y or n): ')
 		match rec {
 			'y' {
 				term.clear()
 				println('The game will continue...')
-				choose := menu()
+				choose = menu.show()
 				println(choose)
 			}
 			else {
