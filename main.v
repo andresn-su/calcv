@@ -1,4 +1,5 @@
 import os { input }
+import term
 
 /**
  * Show the options menu
@@ -28,11 +29,13 @@ fn main() {
 		rec := input('Keep gaming? (y or n): ')
 		match rec {
 			'y' {
+				term.clear()
 				println('The game will continue...')
 				choose := menu()
 				println(choose)
 			}
 			else {
+				term.clear()
 				println('End of the game...')
 				play = false
 			}
