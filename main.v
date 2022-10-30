@@ -1,6 +1,7 @@
 import os { input }
 import term
 import menu
+import operations
 
 /**
  * Main function
@@ -12,6 +13,7 @@ fn main() {
 	term.clear()
 	mut choose := menu.show()
 	println(choose)
+	println(operations.sum(1, 4))
 
 	// Play more times
 	for play {
