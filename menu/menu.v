@@ -11,7 +11,8 @@ pub fn show() int {
 		'1 - Summation',
 		'2 - Subtractrion',
 		'3 - Multiplication',
-		'4 - Division'
+		'4 - Division (not implemented)',
+		'5 - Exit'
 	]
 
 	// Pick and option

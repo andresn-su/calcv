@@ -8,15 +8,15 @@ import operations
 */
 fn main() {
 	mut play := true
+	term.clear()
 
 	// Play more times
 	for play {
 		mut choose := menu.show()
 
 		// Play the game
-		println(choose)
-		println(operations.sum(1, 4))
-		operations.session(1, 8, 2)
+		term.clear()
+		operations.session(choose)!
 
 		// Continue playing?
 		rec := input('Keep gaming? (y or n): ')
