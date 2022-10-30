@@ -9,27 +9,24 @@ import operations
 fn main() {
 	mut play := true
 
-	// First game
-	term.clear()
-	mut choose := menu.show()
-	println(choose)
-	println(operations.sum(1, 4))
-
 	// Play more times
 	for play {
+		mut choose := menu.show()
+
+		// Play the game
+		println(choose)
+		println(operations.sum(1, 4))
+		operations.session(1, 8, 2)
+
+		// Continue playing?
 		rec := input('Keep gaming? (y or n): ')
-		match rec {
-			'y' {
-				term.clear()
-				println('The game will continue...')
-				choose = menu.show()
-				println(choose)
-			}
-			else {
-				term.clear()
-				println('End of the game...')
-				play = false
-			}
-		}
+		term.clear()
+
+		if rec == 'y' {
+			println('The game will continue...')
+		 } else {
+		 	println('End of the game...')
+		 	play = false
+		 }
 	}
 }

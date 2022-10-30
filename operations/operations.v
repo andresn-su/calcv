@@ -15,3 +15,12 @@ pub fn mult(a int, b int) int {
 pub fn div(a int, b int) f32 {
 	return f32(a) / b
 }
+
+/**
+ * A loop with the problems
+*/
+pub fn session(max int, min int, kind int) {
+	println(max)
+	println(min)
+	println(kind)
+}
